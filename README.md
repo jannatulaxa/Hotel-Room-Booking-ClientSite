@@ -1,8 +1,10 @@
-# React + Vite
+# Features Of My projects
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. User Can book rooms
+2. Invalid User Can not see the room Details
+3. User Can Cancel booking .
+4. User Can Use Spetical Offer
+5. USer Can Extend Booking Date.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Live Link: https://hotel-booking-web-c8f4f.web.app/
