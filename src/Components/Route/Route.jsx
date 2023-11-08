@@ -48,12 +48,12 @@ import Update from '../Update/Update';
             },
             {
               path:'/update/:id',
-              element:<Update></Update>,
+              element:<PrivateRoute><Update></Update></PrivateRoute>,
                loader:({params})=>fetch(`http://localhost:5001/books/${params.id}`) 
             },
             {
               path:'/details/:id',
-              element:<DetailsPage></DetailsPage>,
+              element:<PrivateRoute><DetailsPage></DetailsPage></PrivateRoute>,
               loader:({params})=>fetch(`http://localhost:5001/Bookings/${params.id}`)
             },
             {
