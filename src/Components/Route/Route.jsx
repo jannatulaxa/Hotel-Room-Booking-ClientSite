@@ -13,6 +13,7 @@ import PrivateRoute from '../Private/PrivateRoute';
 import Gallary from '../Gallary/Gallary';
 import ContactUs from '../Contact/ContactUs';
 import Update from '../Update/Update';
+import Rating from '../Page/Rating/Rating';
 
 
     const router = createBrowserRouter([
@@ -45,6 +46,11 @@ import Update from '../Update/Update';
             {
               path:'/contact',
               element:<ContactUs></ContactUs>
+            },
+            {
+              path:'/rating/:id',
+              element:<PrivateRoute><Rating></Rating></PrivateRoute>,
+               loader:({params})=>fetch(`http://localhost:5001/books/${params.id}`) 
             },
             {
               path:'/update/:id',

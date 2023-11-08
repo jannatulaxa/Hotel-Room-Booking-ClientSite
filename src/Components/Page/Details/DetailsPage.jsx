@@ -15,6 +15,7 @@ const DetailsPage = () => {
   const { user } = UseAuthProviderHooks();
   const navigate = useNavigate();
 
+
   const {
     _id,
     image1,
@@ -56,8 +57,9 @@ const DetailsPage = () => {
           toast.success("Successfully You Booked The Room!!");
         }
       });
+    const patchData = { roomAvailability };
     const link = `http://localhost:5001/Bookings/${_id}`;
-    axios.patch(link, { roomAvailability }).then((res) => {
+    axios.patch(link, patchData).then((res) => {
       if (res.data.modifiedCount > 0) {
         toast.success("Successfully You Change Booking Availability !!");
       }
@@ -162,15 +164,15 @@ const DetailsPage = () => {
           Booking <span className="text-purple-700">Details</span>
         </h2>
 
-        <div className="grid grid-cols-3 w-[80rem] mx-auto">
+        <div className="grid lg:grid-cols-3 lg:w-[80rem] mx-auto">
           <figure>
-            <img src={image2} alt="Movie" />
+            <img className="w-[20rem] mx-auto" src={image2} alt="Movie" />
           </figure>
           <figure>
-            <img src={image3} alt="Movie" />
+            <img className="w-[20rem] mx-auto" src={image3} alt="Movie" />
           </figure>
           <figure>
-            <img src={image4} alt="Movie" />
+            <img className="w-[20rem] mx-auto" src={image4} alt="Movie" />
           </figure>
         </div>
 
@@ -220,7 +222,7 @@ const DetailsPage = () => {
             {/*Start Work For 2nd Modal */}
 
             {/* You can open the modal using document.getElementById('ID').showModal() method */}
-            
+
             <dialog id="my_modal_4" className="modal">
               <div className="modal-box">
                 <form method="dialog">
@@ -240,8 +242,11 @@ const DetailsPage = () => {
             <div className="card-actions flex">
               {user ? (
                 <button
-                onClick={() => document.getElementById("my_modal_4").showModal()}
-                className="btn btn-outline btn-secondary">
+                  onClick={() =>
+                    document.getElementById("my_modal_4").showModal()
+                  }
+                  className="btn btn-outline btn-secondary"
+                >
                   Book Now
                 </button>
               ) : (

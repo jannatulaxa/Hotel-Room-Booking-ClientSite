@@ -47,13 +47,13 @@ const AuthProvider = ({ children }) => {
 
       if (currentUser) {
         axios
-          .post("http://localhost:5006/jwt", sendingUser, {
+          .post("http://localhost:5001/jwt", sendingUser, {
             withCredentials: true,
           })
           .then(() => {});
       } else {
         axios
-          .post("http://localhost:5006/logout-jwt", sendingUser, {
+          .post("http://localhost:5001/logout-jwt", sendingUser, {
             withCredentials: true,
           })
           .then(() => {});
