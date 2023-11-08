@@ -1,11 +1,12 @@
-import React, { useEffect } from 'react';
+import React, { useState,useEffect } from 'react';
 import Swal from 'sweetalert2';
 import 'aos/dist/aos.css';
 import Aos from 'aos';
 import { Link } from 'react-router-dom';
-const AddBookingCard = ({ bookRoom, bookRooms, setBookRooms }) => {
+const AddBookingCard = ({ bookRooms}) => {
 
-    const {_id, roomDescription, price, roomSize, availability,specialOffers, roomImages } = bookRoom
+    const [Rooms, setRooms] = useState(bookRooms);
+    console.log(bookRooms)
 
     const style={
         width:'200px',
@@ -40,7 +41,7 @@ const AddBookingCard = ({ bookRoom, bookRooms, setBookRooms }) => {
             })
             .then(res=>res.json())
             .then(data=>{
-                console.log(data)
+                
                 if(data.deletedCount > 0){
                     Swal.fire(
                         'Deleted!',
@@ -49,7 +50,7 @@ const AddBookingCard = ({ bookRoom, bookRooms, setBookRooms }) => {
                       )
 
                       const remaining=bookRooms.filter(bookRoom=>bookRoom._id !== id)
-                     setBookRooms(remaining)
+                      setRooms(remaining)
 
                 }
             })
@@ -62,25 +63,31 @@ const AddBookingCard = ({ bookRoom, bookRooms, setBookRooms }) => {
 
     }
     return (
-        <div data-aos="zoom-in-left">
+
+        <div className="grid grid-cols-1 md:grid-cols-3  gap-3">
+          {Rooms?.map((bookRoom) => (
+        <div key={bookRoom._id} data-aos="zoom-in-left">
             <div className="card w-3/5 bg-base-100 shadow-xl mx-auto" style={Cardstyle}>
                 <figure className="px-10 pt-10">
-                    <img style={style} src={roomImages} alt="Shoes" className="rounded-xl" />
+                    <img style={style} src={bookRoom?.image1} alt="Shoes" className="rounded-xl" />
                 </figure>
                 <div className="card-body items-center text-center">
-                    <h2 className="card-title">{roomDescription}</h2>
-                    <p>Room-Size: {roomSize}</p>
-                    <p>Availability: {availability}</p>
-                    <p>SpecialOffers:{specialOffers}</p>
-                    <p>Price: {price}</p>
+                    <h2 className="card-title">{bookRoom?.description}</h2>
+                    <p>Room-Size: {bookRoom?.roomSize}</p>
+                    <p>Availability: {bookRoom?.availability}</p>
+                    <p>SpecialOffers:{bookRoom?.specialOffers}</p>
+                    <p>Price: {bookRoom?.price}</p>
                     <div className="card-actions">
                     <button onClick={()=>handelDelete(bookRoom._id)} className="btn btn-outline btn-secondary">Delete</button>
-                   <Link to={`/update/${_id}`}>
+                   <Link to={`/update/${bookRoom?._id}`}>
                    <button className="btn btn-outline btn-secondary">Update Date</button>
                    </Link>
                     </div>
                 </div>
             </div>
+        </div>
+
+          ))}
         </div>
     );
 };

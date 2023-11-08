@@ -15,7 +15,7 @@ const PrivateRoute = ({children}) => {
         <progress className="progress w-56"></progress> 
     }
     
-    return <Navigate state={location.pathname}  to='/login'></Navigate>
+    // return <Navigate state={location.pathname}  to='/login'></Navigate>
        
 };
 
