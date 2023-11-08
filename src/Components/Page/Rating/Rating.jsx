@@ -13,14 +13,9 @@ const Rating = () => {
         const Rating = form.photo.value;
         const fullForm = { id,Rating, Review };
         
-        
-        // const link = `https://hotel-room-booking-server-site.vercel.app/BookingsRating/${id}`;
-        // axios.patch(link, fullForm).then((res) => {
-        //   if (res.data.modifiedCount > 0) {
-        //     form.reset();
+     
           Swal.fire("Yeahh!", "Successfully added product", "success");
-        //   }
-        // });
+       
       };
 
 
