@@ -1,0 +1,38 @@
+[
+    {
+    "offerName": "Early Bird Discount",
+    "img":"https://i.ibb.co/Br5Br5L/download-38.jpg",
+    "offerDescription": "Book at least 30 days in advance and get 20% off your stay.",
+    "discountPercentage": 20
+  },
+  {
+    "offerName": "Stay Longer, Save More",
+    "img":"https://i.ibb.co/1mWVM0K/download-37.jpg",
+    "offerDescription": "Stay 7 nights or more and receive a 15% discount.",
+    "discountPercentage": 15
+  },
+  {
+    "offerName": "Last-Minute Deal",
+    "img":"https://i.ibb.co/VTvfcG8/download-39.jpg",
+    "offerDescription": "Stay 7 nights or more and receive a 15% discount.",
+    "discountPercentage": 15
+  },
+  {
+    "offerName": "Family Special",
+    "img":"https://i.ibb.co/y4t5vFF/download-40.jpg",
+    "offerDescription": "Stay 7 nights or more and receive a 15% discount.",
+    "discountPercentage": 15
+  },
+  {
+    "offerName": "Honeymoon Romance",
+    "img":"https://i.ibb.co/C2hm6yw/images-31.jpg",
+    "offerDescription": "Stay 7 nights or more and receive a 15% discount.",
+    "discountPercentage": 15
+  },
+  {
+    "offerName": "Summer Getaway",
+    "img":"https://i.ibb.co/p0dSGtZ/images-30.jpg",
+    "offerDescription": "Stay 7 nights or more and receive a 15% discount.",
+    "discountPercentage": 15
+  }
+]

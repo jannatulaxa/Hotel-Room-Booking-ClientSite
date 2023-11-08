@@ -1,0 +1,15 @@
+.success-alert {
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* White text color */
+    padding: 15px; /* Padding inside the alert */
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  
+  .show {
+    display: block; /* Show the alert */
+  }

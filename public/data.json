@@ -1,0 +1,163 @@
+[
+    {
+      "roomDescription": "Deluxe Double Room with Sea View",
+      "price": "$150 per night",
+      "roomSize": "350 sq. ft.",
+      "availability": "Available",
+      "roomImages":"https://i.ibb.co/CWr6fvk/life-resort-hotel-resort-hotel-wallpaper-preview.jpg",
+      "specialOffers": "15% off for early bookings"
+    },
+    {
+      "roomDescription": "Luxury Suite with Balcony",
+      "price": "$250 per night",
+      "roomSize": "500 sq. ft.",
+      "availability": "Available",
+      "roomImages": "https://i.ibb.co/1mWVM0K/download-37.jpg",
+      "specialOffers": "Complimentary breakfast"
+    },
+    {
+      "roomDescription": "Standard Twin Room",
+      "price": "$100 per night",
+      "roomSize": "300 sq. ft.",
+      "availability": "Booked",
+      "roomImages": "https://i.ibb.co/Br5Br5L/download-38.jpg",
+      "specialOffers": ""
+    },
+    {
+      "roomDescription": "Executive Suite with Ocean View",
+      "price": "$300 per night",
+      "roomSize": "600 sq. ft.",
+      "availability": "Available",
+      "roomImages":"https://i.ibb.co/VTvfcG8/download-39.jpg",
+      "specialOffers": "20% off for extended stays"
+    },
+    {
+      "roomDescription": "Family Room with Garden Access",
+      "price": "$180 per night",
+      "roomSize": "400 sq. ft.",
+      "availability": "Available",
+      "roomImages":"https://i.ibb.co/y4t5vFF/download-40.jpg",
+      "specialOffers": ""
+    },
+    {
+      "roomDescription": "Economy Single Room",
+      "price": "$80 per night",
+      "roomSize": "250 sq. ft.",
+      "availability": "Available",
+      "roomImages":"https://i.ibb.co/p0dSGtZ/images-30.jpg",
+      "specialOffers": "10% off for weekday stays"
+    },
+    {
+      "roomDescription": "Presidential Suite with Pool",
+      "price": "$500 per night",
+      "roomSize": "800 sq. ft.",
+      "availability": "Booked",
+      "roomImages":"https://i.ibb.co/Qj2Mys6/images-30.jpg",
+      "specialOffers": "Exclusive spa access"
+    },
+    {
+      "roomDescription": "Standard Double Room",
+      "price": "$120 per night",
+      "roomSize": "320 sq. ft.",
+      "availability": "Available",
+      "roomImages":"https://i.ibb.co/C2hm6yw/images-31.jpg",
+      "specialOffers": ""
+    },
+    {
+      "roomDescription": "Panoramic View Suite",
+      "price": "$280 per night",
+      "roomSize": "550 sq. ft.",
+      "availability": "Available",
+      "roomImages": "https://i.ibb.co/zJxjD0f/images-32.jpg",
+      "specialOffers": "Free airport shuttle"
+    },
+    {
+      "roomDescription": "Cozy Twin Room",
+      "price": "$110 per night",
+      "roomSize": "310 sq. ft.",
+      "availability": "Available",
+      "roomImages":"https://i.ibb.co/9HwVXz1/images-33.jpg",
+      "specialOffers": ""
+    },
+    {
+      "roomDescription": "Luxury Penthouse Suite",
+      "price": "$600 per night",
+      "roomSize": "1000 sq. ft.",
+      "availability": "Available",
+      "roomImages":"https://i.ibb.co/chcm3Hq/images-34.jpg",
+      "specialOffers": "Private concierge service"
+    },
+    {
+      "roomDescription": "Classic Queen Room",
+      "price": "$90 per night",
+      "roomSize": "280 sq. ft.",
+      "availability": "Available",
+      "roomImages":"https://i.ibb.co/pfRjhsS/images-35.jpg",
+      "specialOffers": "10% off for return guests"
+    },
+    {
+      "roomDescription": "Executive Double Room",
+      "price": "$160 per night",
+      "roomSize": "380 sq. ft.",
+      "availability": "Booked",
+      "roomImages":"https://i.ibb.co/NL1sqQk/images-36.jpg",
+      "specialOffers": ""
+    },
+    {
+      "roomDescription": "Junior Suite with City View",
+      "price": "$220 per night",
+      "roomSize": "450 sq. ft.",
+      "availability": "Available",
+      "roomImages":"https://i.ibb.co/0yXctgs/images-37.jpg",
+      "specialOffers": "Late checkout option"
+    },
+    {
+      "roomDescription": "Budget Single Room",
+      "price": "$70 per night",
+      "roomSize": "230 sq. ft.",
+      "availability": "Available",
+      "roomImages":"https://i.ibb.co/GQNwG6v/images-38.jpg",
+      "specialOffers": "Free Wi-Fi"
+    },
+    {
+      "roomDescription": "Grand Suite with Terrace",
+      "price": "$350 per night",
+      "roomSize": "700 sq. ft.",
+      "availability": "Available",
+      "roomImages":"https://i.ibb.co/zsP2qyz/images-39.jpg",
+      "specialOffers": "Complimentary minibar"
+    },
+    {
+      "roomDescription": "Economy Twin Room",
+      "price": "$100 per night",
+      "roomSize": "300 sq. ft.",
+      "availability": "Available",
+      "roomImages":"https://i.ibb.co/0mYYPJ4/images-40.jpg",
+      "specialOffers": ""
+    },
+    {
+      "roomDescription": "Family Suite with Adjoining Rooms",
+      "price": "$280 per night",
+      "roomSize": "550 sq. ft.",
+      "availability": "Available",
+      "roomImages":"https://i.ibb.co/c8DsLzn/images-42.jpg",
+      "specialOffers": "Children stay free"
+    },
+    {
+      "roomDescription": "Standard Queen Room",
+      "price": "$110 per night",
+      "roomSize": "320 sq. ft.",
+      "availability": "Available",
+      "roomImages":"https://i.ibb.co/3zZzJvS/images-41.jpg",
+      "specialOffers": ""
+    },
+    {
+      "roomDescription": "Honeymoon Suite with Jacuzzi",
+      "price": "$400 per night",
+      "roomSize": "800 sq. ft.",
+      "availability": "Booked",
+      "roomImages":"https://i.ibb.co/WWZqwpX/images-43.jpg",
+      "specialOffers": "Bottle of champagne on arrival"
+    }
+  ]
+  
