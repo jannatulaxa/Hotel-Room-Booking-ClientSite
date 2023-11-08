@@ -14,7 +14,7 @@ const Rating = () => {
         const fullForm = { id,Rating, Review };
         
         
-        // const link = `http://localhost:5001/BookingsRating/${id}`;
+        // const link = `https://hotel-room-booking-server-site.vercel.app/BookingsRating/${id}`;
         // axios.patch(link, fullForm).then((res) => {
         //   if (res.data.modifiedCount > 0) {
         //     form.reset();

@@ -25,7 +25,7 @@ const AddBookingCard = ({ bookRooms }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5001/books/${id}`, {
+        fetch(`https://hotel-room-booking-server-site.vercel.app/books/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

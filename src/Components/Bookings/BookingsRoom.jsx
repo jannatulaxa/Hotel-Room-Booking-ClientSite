@@ -7,7 +7,7 @@ const BookingsRoom = () => {
   // const [rooms, setRooms] = useState([]); // Use square brackets to destructure the state
 
   // useEffect(() => {
-  //   fetch("http://localhost:5001/Bookings")
+  //   fetch("https://hotel-room-booking-server-site.vercel.app/Bookings")
   //     .then((res) => res.json())
   //     .then((data) => setRooms(data));
   // }, []);

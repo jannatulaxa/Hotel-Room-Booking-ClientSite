@@ -5,7 +5,7 @@ const Offer = () => {
     const [offers, setOffers] = useState([]); // Use square brackets and setOffers to define the state
 
     useEffect(() => {
-        fetch('http://localhost:5001/offer')
+        fetch('https://hotel-room-booking-server-site.vercel.app/offer')
             .then(res => res.json())
             .then(data => setOffers(data)); // Use setOffers to update the state
     }, []);
