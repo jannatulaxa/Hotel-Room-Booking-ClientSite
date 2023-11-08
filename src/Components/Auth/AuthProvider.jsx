@@ -9,6 +9,11 @@ import {
   signOut,
 } from "firebase/auth";
 import app from "../Firebase/Firebase.config";
+import axios from "axios";
+
+
+
+
 export const AuthContext = createContext();
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
@@ -33,12 +38,32 @@ const AuthProvider = ({ children }) => {
     return signOut(auth);
   };
 
+  // Keep The State True When User Belongs
   useEffect(() => {
-    return onAuthStateChanged(auth, (user) => {
-      setUser(user);
+    const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      const sendingUser = { email: user?.email };
       setLoading(false);
+
+      if (currentUser) {
+        axios
+          .post("http://localhost:5006/jwt", sendingUser, {
+            withCredentials: true,
+          })
+          .then(() => {});
+      } else {
+        axios
+          .post("http://localhost:5006/logout-jwt", sendingUser, {
+            withCredentials: true,
+          })
+          .then(() => {});
+      }
     });
-  }, []);
+
+    return () => {
+      unSubscribe();
+    };
+  }, [user]);
 
   const userInfo = {
     user,

@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
 import BookingCard from "./BookingCard";
 import { Helmet } from "react-helmet";
+import { useLoaderData } from "react-router-dom/dist/umd/react-router-dom.development";
 const BookingsRoom = () => {
-  const [rooms, setRooms] = useState([]); // Use square brackets to destructure the state
+  const rooms = useLoaderData()
+  // const [rooms, setRooms] = useState([]); // Use square brackets to destructure the state
 
-  useEffect(() => {
-    fetch("http://localhost:5001/Bookings")
-      .then((res) => res.json())
-      .then((data) => setRooms(data));
-  }, []);
-  console.log(rooms)
+  // useEffect(() => {
+  //   fetch("http://localhost:5001/Bookings")
+  //     .then((res) => res.json())
+  //     .then((data) => setRooms(data));
+  // }, []);
+  // console.log(rooms)
 
   if (rooms.length > 0) {
     return (
@@ -17,7 +19,10 @@ const BookingsRoom = () => {
         <Helmet>
           <title>Booking Page</title>
         </Helmet>
-        <h2 className="text-2xl font-bold text-center my-20 underline">
+
+        
+
+        <h2 className="text-2xl text-center font-sans font-thin mt-6 mb-7">
           Booking <span className="text-[#BA8A3E]">Room</span>:{" "}
           {rooms.length}
         </h2>

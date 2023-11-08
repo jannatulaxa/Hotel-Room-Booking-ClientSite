@@ -4,8 +4,9 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "aos/dist/aos.css";
 const BookingCard = ({ room }) => {
-  // console.log(Object.keys(booking).join(","))
-  const { _id, image1, roomName, price } = room;
+  // console.log(Object.keys(room).join(","))
+  const { _id,image1,image2,image3,image4,price,description,roomName,roomSize,setInRoom,roomAvailability
+  } = room;
 
   const style = {
     width: "[100%]",
@@ -22,14 +23,14 @@ const BookingCard = ({ room }) => {
   }, []);
   return (
     <div data-aos="zoom-in" className="mb-20">
-      <div className="card bg-base-100 shadow-xl mx-10" style={Cardstyle}>
-        <figure className="w-[100%] p-0">
+      <div className=" rounded-none bg-base-100 border-[#BA8A3E] border hover:shadow-xl mx-10" style={Cardstyle}>
+        <figure className="w-full">
           <Link to={`/details/${_id}`}>
             <img
               style={style}
               src={image1}
               alt=""
-              className="rounded-xl w-full"
+              className="h-[50rem] w-[100%]"
             />
           </Link>
         </figure>
@@ -40,9 +41,9 @@ const BookingCard = ({ room }) => {
             Reviews: {room?.reviewCount ? room?.reviewCount : "0"}
           </h2>
           <p>Price: {price}</p>
-          <div className="card-actions">
+          <div className="card-actions text-[#BA8A3E]">
             <Link to={`/details/${_id}`}>
-              <button className="btn btn-outline btn-secondary">Details</button>
+            <button className="btn rounded-none bg-[#BA8A3E] border-0 hover:text-[#BA8A3E] text-white">Explore Room</button>
             </Link>
           </div>
         </div>

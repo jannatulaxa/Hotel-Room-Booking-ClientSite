@@ -35,7 +35,8 @@ import Update from '../Update/Update';
             },
             {
               path:'/room',
-              element:<BookingsRoom></BookingsRoom>
+              element:<BookingsRoom></BookingsRoom>,
+              loader:()=>fetch("http://localhost:5001/Bookings")
             },
             {
               path:'/gallery',

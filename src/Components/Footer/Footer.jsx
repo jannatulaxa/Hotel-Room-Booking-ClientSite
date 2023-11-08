@@ -2,9 +2,9 @@ import logo from "../../assets/logo.png";
 
 const Footer = () => {
   return (
-    <div className="bg-[#3B1E00]">
+    <div className="bg-[#252525]">
       <div className="w-[90%] mx-auto">
-        <footer className="footer md:grid-rows-4 md:grid-cols-3 lg:grid-cols-3 lg:grid-rows-1 py-10  text-[#CF8613]">
+        <footer className="footer md:grid-rows-4 md:grid-cols-3 lg:grid-cols-3 lg:grid-rows-1 py-10  text-[#BA8A3E]">
           <nav className="text-lg">
             <header className="text-2xl font-serif  font-bold text-white">
               Company
