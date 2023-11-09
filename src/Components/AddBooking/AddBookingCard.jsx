@@ -34,7 +34,7 @@ const AddBookingCard = ({ bookRoom, addedBookRoom, setBookRooms }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5001/books/${_id}`, {
+        fetch(`https://hotel-room-booking-server-site.vercel.app/books/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -51,7 +51,7 @@ const AddBookingCard = ({ bookRoom, addedBookRoom, setBookRooms }) => {
 
           // const availability = bookRoom?.availability
           // const patchData = { availability };
-          // const link = `http://localhost:5001/Bookings/${_id}`;
+          // const link = `https://hotel-room-booking-server-site.vercel.app/Bookings/${_id}`;
           // axios.patch(link, patchData).then((res) => {
           //   if (res.data.modifiedCount > 0) {
           //     toast.success("Successfully You Change Booking Availability !!");

@@ -19,7 +19,7 @@ const Rating = () => {
     const fullForm = { id, Rating, Review, count };
 
     // console.log(bookId);
-    // const link = `http://localhost:5001/booksRating/${bookId}`;
+    // const link = `https://hotel-room-booking-server-site.vercel.app/booksRating/${bookId}`;
     // axios.patch(link, fullForm).then((res) => {
     //   if (res.data.acknowledged) {
     //     form.reset();
