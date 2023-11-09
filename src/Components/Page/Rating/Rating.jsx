@@ -7,7 +7,8 @@ const Rating = () => {
   const room = useLoaderData();
 
   const id = useParams();
-  const { count } = room;
+  const {bookId, count} = room;
+  console.log(room)
 
   const handelRating = (e) => {
     e.preventDefault();
@@ -17,14 +18,14 @@ const Rating = () => {
 
     const fullForm = { id, Rating, Review, count };
 
-    console.log(id);
-    // const link = `http://localhost:5001/booksRating/${id}`;
-    // axios.patch(link, fullForm).then((res) => {
-    //   if (res.data.acknowledged) {
-    //     form.reset();
-    //     Swal.fire("Thanks For!", "Successfully You Give Rating !!", "success");
-    //   }
-    // });
+    console.log(bookId);
+    const link = `http://localhost:5001/booksRating/${bookId}`;
+    axios.patch(link, fullForm).then((res) => {
+      if (res.data.acknowledged) {
+        form.reset();
+        Swal.fire("Thanks For!", "Successfully You Give Rating !!", "success");
+      }
+    });
 
     // Swal.fire("Yeahh!", "Successfully added product", "success");
   };
