@@ -6,13 +6,14 @@ import { AuthContext } from "../Auth/AuthProvider";
 import Google from "../Google/Google";
 import { Helmet } from "react-helmet";
 import swal from "sweetalert";
+import { useNavigation } from "react-router-dom/dist/umd/react-router-dom.development";
 
 
 
 const Login = () => {
   const { userSingIn } = useContext(AuthContext);
   const [emailError, setEmailError] = useState("");
-  const navigate = useNavigate();
+  const navigation = useNavigation();
   const handelLogin = (e) => {
     e.preventDefault();
 
@@ -41,12 +42,13 @@ const Login = () => {
         text: "You clicked the button!",
         icon: "success",
       });
+      navigation(location?.state ? location.state : "/");
     }
 
     userSingIn(email, password)
       .then((res) => {
         console.log(res.user);
-        navigate(location?.state ? location.state : "/");
+        navigation(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.log(error);

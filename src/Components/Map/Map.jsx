@@ -30,7 +30,7 @@ const Map = () => {
 
             <ImLocation className="text-2xl "></ImLocation>
           <p className="font-thin text-white flex">
-            Go happy. Go anywhere. Stay here.<br />
+            Goo happy. Go anywhere. Stay here.<br />
              Live like a King. Simple made perfect. 
              Nice people taking care of nice people.
           </p>

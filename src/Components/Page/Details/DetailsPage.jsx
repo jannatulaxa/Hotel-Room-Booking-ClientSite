@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
-import Swal from "sweetalert2";
 import UseAuthProviderHooks from "../../../Hook/UseAuthProviderHook";
 import { useNavigate } from "react-router-dom/dist/umd/react-router-dom.development";
 import DatePicker from "react-datepicker";
@@ -72,34 +71,36 @@ const DetailsPage = () => {
   if (roomAvailability > 0) {
     return (
       <div className="my-10">
-        <h2 className="text-2xl font-bold mb-3">
-          Booking <span className="text-purple-700">Details</span>
-        </h2>
+        <h2 className="text-2xl text-center font-sans font-thin mt-6 mb-7">
+        Room <span className="text-[#BA8A3E]">Details</span>{" "}
+      </h2>
 
-        <div className="grid grid-cols-3 w-[80rem] mx-auto">
+        <div className=" flex flex-col lg:flex-row  w-[90%] mx-auto">
           <figure>
-            <img src={image2} alt="Movie" />
+            <img className="lg:h-[20rem]" src={image2} alt="Movie" />
           </figure>
           <figure>
-            <img src={image3} alt="Movie" />
+            <img className="lg:h-[20rem]" src={image3} alt="Movie" />
           </figure>
           <figure>
-            <img src={image4} alt="Movie" />
+            <img className="lg:h-[20rem]" src={image4} alt="Movie" />
           </figure>
         </div>
 
-        <div className="card card-side bg-base-100 shadow-xl">
+        <div className="">
           <div className="card-body">
-            <h2 className="card-title text-center">{description}</h2>
+            <h2 className="card-title md:text-2xl text-start text-[#BA8A3E]">{description}</h2>
             <p>Room-Size: {roomSize}</p>
             <p>Room-Availability: {roomAvailability}</p>
-            <span>Select Booking Date:</span>
+            <div className="">
+            <span className="font-bold" >Select Booking Date:</span>
             <DatePicker
               id="date"
-              className="input input-bordered lg:w-[17rem] md:w-[27rem] w-[15rem] rounded-tl-none rounded-bl-none text-[#a8a6a6]"
+              className="input input-bordered md:ml-5 lg:w-[17rem] md:w-[27rem] w-[15rem] rounded-none text-[#BA8A3E] border-[#BA8A3E]"
               selected={startDate}
               onChange={(date) => setStartDate(date)}
             />
+            </div>
             {/*Start Work For Modal */}
 
             <dialog id="my_modal_3" className="modal">
@@ -134,7 +135,7 @@ const DetailsPage = () => {
             <div className="card-actions flex">
               {user ? (
                 <button
-                  className="btn btn-outline btn-secondary"
+                  className="btn border-[#BA8A3E] rounded-none bg-[#BA8A3E] text-white "
                   onClick={() =>
                     document.getElementById("my_modal_3").showModal()
                   }
@@ -160,11 +161,11 @@ const DetailsPage = () => {
   } else {
     return (
       <div className="my-10">
-        <h2 className="text-2xl font-bold mb-3">
-          Booking <span className="text-purple-700">Details</span>
-        </h2>
+        <h2 className="text-2xl text-center font-sans font-thin mt-6 mb-7">
+        Booking <span className="text-[#BA8A3E]">Dethbuhbguails</span>{" "}
+      </h2>
 
-        <div className="grid lg:grid-cols-3 lg:w-[80rem] mx-auto">
+        <div className="grid  grid-cols-3 lg:grid-cols-3 lg:w-[80rem] mx-auto">
           <figure>
             <img className="w-[20rem] mx-auto" src={image2} alt="Movie" />
           </figure>

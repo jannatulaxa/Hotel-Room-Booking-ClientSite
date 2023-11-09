@@ -1,13 +1,15 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import logo from '../../assets/login.svg'
 import { AuthContext } from '../Auth/AuthProvider';
 import { Link } from 'react-router-dom';
 import Google from '../Google/Google';
 import swal from 'sweetalert';
+import { useNavigation } from 'react-router-dom/dist/umd/react-router-dom.development';
 
 const Register = () => {
 
     const {userSingUp}=useContext(AuthContext)
+     const navigation = useNavigation();
     const handelRegister=(e)=>{
         e.preventDefault()
         const name=e.target.name.value;
@@ -22,12 +24,7 @@ const Register = () => {
 
        const emailPattern = /^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i;
 
-  if (!email.match(emailPattern)) {
-    setEmailError('Please enter a valid email address');
-    return;
-  } else {
-    setEmailError('');
-  }
+
        if(password.length<6){
         swal({
           title: "FirebaseError: Firebase: Password should be at least 6 characters (auth/weak-password).",
@@ -40,7 +37,7 @@ const Register = () => {
           text: "You clicked the button!",
           icon: "success",
         });
-
+        navigation("/");
        }
       
 
@@ -73,9 +70,7 @@ const Register = () => {
                   <span className="label-text">Email</span>
                 </label>
                 <input type="email" name='email' placeholder="email" className="input input-bordered" required />
-                {emailError && (
-                  <p className="text-xs text-red-600">{emailError}</p>
-                )}
+               
               </div>
               <div className="form-control">
                 <label className="label">

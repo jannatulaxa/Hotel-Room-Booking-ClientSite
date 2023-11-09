@@ -10,19 +10,19 @@ const Footer = () => {
               Company
             </header>
             <a className="link link-hover">OUR COMPANY</a>
-            <a className="link link-hover">OUR COFFEEs</a>
-            <a className="link link-hover">OUR COFFEE STORES</a>
-            <a className="link link-hover">Volleyball Shoes</a>
-            <a className="link link-hover">STORIES & NEWS</a>
+            <a className="link link-hover">OUR Bookings</a>
+            <a className="link link-hover">OUR Hotel Rooms</a>
+            <a className="link link-hover">Preview</a>
+            <a className="link link-hover">Reviews</a>
           </nav>
           <nav className="text-lg">
             <header className="text-2xl font-serif font-bold text-white">
               Services
             </header>
-            <a className="link link-hover">BREWING GUIDE</a>
-            <a className="link link-hover">MENU</a>
-            <a className="link link-hover">COFFEE SHOP</a>
-            <a className="link link-hover">RESERVATIONS</a>
+            <a className="link link-hover">Single Room</a>
+            <a className="link link-hover">Double Room</a>
+            <a className="link link-hover">Food SHOP</a>
+            <a className="link link-hover">Pool Area</a>
           </nav>
           <nav className="text-lg">
             <header className="text-2xl font-serif font-bold text-white">
@@ -38,8 +38,8 @@ const Footer = () => {
               <div className="flex   gap-6 mt-8 flex-wrap">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="26"
-                  height="26"
+                  width="28"
+                  height="28"
                   viewBox="0 0 36 36"
                   fill="none"
                 >
@@ -82,8 +82,8 @@ const Footer = () => {
                 </svg>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="26"
-                  height="26"
+                  width="24"
+                  height="24"
                   viewBox="0 0 36 36"
                   fill="none"
                 >

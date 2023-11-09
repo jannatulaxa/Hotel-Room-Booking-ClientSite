@@ -121,7 +121,7 @@ const Navbar = () => {
                 Login
               </Link>
               <Link
-                to={"/resister"}
+                to={"/register"}
                 className=" bg-[#CF8613] px-4 py-2 rounded-lg  text-white font-bold border-2 border-[#CF8613] bg-transparent"
               >
                 Resistration

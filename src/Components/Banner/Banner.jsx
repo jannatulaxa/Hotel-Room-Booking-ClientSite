@@ -2,7 +2,7 @@ import "./banner.css"
 
 const Banner = () => {
   return (
-    <div className="banner flex  justify-center items-center h-[40rem] relative z-10">
+    <div className="banner flex  justify-center items-center h-[40rem]">
       <div className="text-center  p-[1rem] md:p-[3.5rem] bg-black opacity-70 border border-[#FCD767]">
       <p className="font-serif font-bold lg:text-6xl md:text-4xl text-3xl ">Welcome To The Hotel Of
 </p>
@@ -17,7 +17,7 @@ const Banner = () => {
         Come, stay and enjoy your day. · We give you a legendary welcome, every time you come back. · The best place to be.
         </p>
       
-      <div><button className="btn bg-[#BA8A3E] border-0 hover:text-[#BA8A3E] rounded-none text-white">Go Now --></button></div>
+      <div><button className="btn bg-[#BA8A3E] border-0 hover:text-[#BA8A3E] rounded-none text-white">Go Now</button></div>
       </div>
     </div>
   );
