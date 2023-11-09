@@ -47,13 +47,13 @@ const AuthProvider = ({ children }) => {
 
       if (currentUser) {
         axios
-          .post("https://hotel-room-booking-server-site.vercel.app/jwt", sendingUser, {
+          .post("http://localhost:5001/jwt", sendingUser, {
             withCredentials: true,
           })
           .then(() => {});
       } else {
         axios
-          .post("https://hotel-room-booking-server-site.vercel.app/logout-jwt", sendingUser, {
+          .post("http://localhost:5001/logout-jwt", sendingUser, {
             withCredentials: true,
           })
           .then(() => {});

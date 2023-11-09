@@ -15,6 +15,7 @@ const AddBookingCard = ({ bookRooms }) => {
   }, []);
 
   const handelDelete = (id) => {
+    
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -25,7 +26,8 @@ const AddBookingCard = ({ bookRooms }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://hotel-room-booking-server-site.vercel.app/books/${id}`, {
+        console.log(id)
+        fetch(`http://localhost:5001/books/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

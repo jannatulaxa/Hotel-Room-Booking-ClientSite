@@ -37,7 +37,7 @@ import Rating from '../Page/Rating/Rating';
             {
               path:'/room',
               element:<BookingsRoom></BookingsRoom>,
-              loader:()=>fetch("https://hotel-room-booking-server-site.vercel.app/Bookings")
+              loader:()=>fetch("http://localhost:5001/Bookings")
             },
             {
               path:'/gallery',
@@ -55,17 +55,17 @@ import Rating from '../Page/Rating/Rating';
             {
               path:'/update/:id',
               element:<PrivateRoute><Update></Update></PrivateRoute>,
-               loader:({params})=>fetch(`https://hotel-room-booking-server-site.vercel.app/books/${params.id}`) 
+               loader:({params})=>fetch(`http://localhost:5001/books/${params.id}`) 
             },
             {
               path:'/details/:id',
               element:<PrivateRoute><DetailsPage></DetailsPage></PrivateRoute>,
-              loader:({params})=>fetch(`https://hotel-room-booking-server-site.vercel.app/Bookings/${params.id}`)
+              loader:({params})=>fetch(`http://localhost:5001/Bookings/${params.id}`)
             },
             {
               path:'/bookings',
               element:<PrivateRoute><AddBooking></AddBooking></PrivateRoute>,
-              loader:()=>fetch('https://hotel-room-booking-server-site.vercel.app/books')
+              loader:()=>fetch('http://localhost:5001/books')
               
             },
           ]

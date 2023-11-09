@@ -46,7 +46,7 @@ const DetailsPage = () => {
       roomAvailability,
     };
 
-    fetch("https://hotel-room-booking-server-site.vercel.app/books", {
+    fetch("http://localhost:5001/books", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -60,7 +60,7 @@ const DetailsPage = () => {
         }
       });
     const patchData = { roomAvailability };
-    const link = `https://hotel-room-booking-server-site.vercel.app/Bookings/${_id}`;
+    const link = `http://localhost:5001/Bookings/${_id}`;
     axios.patch(link, patchData).then((res) => {
       if (res.data.modifiedCount > 0) {
         toast.success("Successfully You Change Booking Availability !!");

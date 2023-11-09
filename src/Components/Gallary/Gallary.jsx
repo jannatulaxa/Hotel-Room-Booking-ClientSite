@@ -28,7 +28,7 @@ const Gallary = () => {
   // const [gallerys, setGallerys] = useState([]); // Use square brackets to destructure the state
 
   // useEffect(() => {
-  //     fetch('https://hotel-room-booking-server-site.vercel.app/Bookings')
+  //     fetch('http://localhost:5001/Bookings')
   //     .then(res => res.json())
   //     .then(data => setGallerys(data))
   // }, []);
