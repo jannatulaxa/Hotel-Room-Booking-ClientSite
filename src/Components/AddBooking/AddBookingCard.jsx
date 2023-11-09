@@ -23,7 +23,7 @@ const AddBookingCard = ({ bookRoom, addedBookRoom, setBookRooms }) => {
     });
   }, []);
 
-  const handelDelete = (id) => {
+  const handelDelete = () => {
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -34,7 +34,7 @@ const AddBookingCard = ({ bookRoom, addedBookRoom, setBookRooms }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5001/books/${id}`, {
+        fetch(`http://localhost:5001/books/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -43,7 +43,7 @@ const AddBookingCard = ({ bookRoom, addedBookRoom, setBookRooms }) => {
               Swal.fire("Deleted!", "Your file has been deleted.", "success");
 
               const remaining = addedBookRoom.filter(
-                (bookRoom) => bookRoom._id !== id
+                (bookRoom) => bookRoom._id !== _id
               );
               setBookRooms(remaining);
             }
@@ -81,7 +81,7 @@ const AddBookingCard = ({ bookRoom, addedBookRoom, setBookRooms }) => {
         <p>Price: ${price}</p>
         <div className="card-actions">
           <button
-            onClick={() => handelDelete(_id)}
+            onClick={() => handelDelete()}
             className="btn btn-outline btn-secondary"
           >
             Cancel Booking

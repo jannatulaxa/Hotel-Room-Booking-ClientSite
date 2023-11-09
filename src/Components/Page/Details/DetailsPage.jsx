@@ -32,7 +32,7 @@ const DetailsPage = () => {
 
   const handleAddToBook = () => {
     const cartItem = {
-      _id,
+      bookId:_id,
       image1,
       image2,
       image3,

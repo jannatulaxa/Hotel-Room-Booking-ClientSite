@@ -44,6 +44,7 @@ const Rating = () => {
             className="w-full input input-bordered input-md"
             type="text"
             placeholder="Give Rating Out of 5"
+            required
           />
         </label>
         <label className="input-group md:w-4/5 lg:w-full mx-auto input-group-md">
