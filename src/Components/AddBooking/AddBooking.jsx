@@ -13,8 +13,10 @@ const AddBooking = () => {
         <Helmet>
           <title>My Booking Page</title>
         </Helmet>
-        <h2 className="text-2xl font-bold">
-          My Booking <span className="text-purple-600">Room</span>:{" "}
+        
+
+        <h2 className="text-2xl text-center font-sans font-thin mt-6 mb-7">
+          My Booking <span className="text-[#BA8A3E]">Room</span>:{" "}
           {bookRooms.length}
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2  gap-3 my-20 w-[90%] mx-auto">
