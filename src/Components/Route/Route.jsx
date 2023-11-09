@@ -36,7 +36,7 @@ import Rating from '../Page/Rating/Rating';
             {
               path:'/room',
               element:<BookingsRoom></BookingsRoom>,
-              // loader:()=>fetch("http://localhost:5001/Bookings")
+              loader:()=>fetch("http://localhost:5001/Bookings")
             },
             {
               path:'/gallery',
@@ -64,7 +64,7 @@ import Rating from '../Page/Rating/Rating';
             {
               path:'/bookings',
               element:<PrivateRoute><AddBooking></AddBooking></PrivateRoute>,
-              // loader:()=>fetch('http://localhost:5001/books')
+              loader:()=>fetch('http://localhost:5001/books')
               
             },
           ]
