@@ -3,6 +3,10 @@ import Swal from "sweetalert2";
 import "aos/dist/aos.css";
 import Aos from "aos";
 import { Link } from "react-router-dom";
+import axios from "axios";
+
+
+
 const AddBookingCard = ({ bookRooms }) => {
   const [Rooms, setRooms] = useState(bookRooms);
 
@@ -14,7 +18,7 @@ const AddBookingCard = ({ bookRooms }) => {
     });
   }, []);
 
-  const handelDelete = (id) => {
+  const handelDelete = (id,bookRoom?.availability) => {
     
     Swal.fire({
       title: "Are you sure?",
@@ -26,7 +30,7 @@ const AddBookingCard = ({ bookRooms }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        console.log(id)
+      
         fetch(`http://localhost:5001/books/${id}`, {
           method: "DELETE",
         })
@@ -41,6 +45,19 @@ const AddBookingCard = ({ bookRooms }) => {
               setRooms(remaining);
             }
           })
+
+          const availability = bookRoom?.availability
+          const patchData = { availability };
+          const link = `http://localhost:5001/Bookings/${_id}`;
+          axios.patch(link, patchData).then((res) => {
+            if (res.data.modifiedCount > 0) {
+              toast.success("Successfully You Change Booking Availability !!");
+            }
+          })
+
+
+
+
           .catch((error) => {
             console.error("Error deleting the record:", error);
           });
@@ -70,11 +87,11 @@ const AddBookingCard = ({ bookRooms }) => {
                 <p>Room-Size: {bookRoom?.roomSize}</p>
                 <p>Availability: {bookRoom?.availability}</p>
                 <p>SpecialOffers:{bookRoom?.specialOffers}</p>
-                <p>Review: {bookRoom?.count}</p>
+                <p className="text-lg font-bold">For Giving Please Hit on Give Rating Button</p>
                 <p>Price: ${bookRoom?.price}</p>
                 <div className="card-actions">
                   <button
-                    onClick={() => handelDelete(bookRoom._id)}
+                    onClick={() => handelDelete(bookRoom._id,bookRoom?.availability)}
                     className="btn btn-outline btn-secondary"
                   >
                     Cancel Booking

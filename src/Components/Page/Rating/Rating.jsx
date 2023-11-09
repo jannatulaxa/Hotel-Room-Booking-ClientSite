@@ -1,10 +1,13 @@
 import { useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 import axios from "axios";
-import { toast } from "react-toastify";
+import { useLoaderData } from "react-router-dom/dist/umd/react-router-dom.development";
 
 const Rating = () => {
+  const room = useLoaderData();
+
   const id = useParams();
+  const { count } = room;
 
   const handelRating = (e) => {
     e.preventDefault();
@@ -12,15 +15,14 @@ const Rating = () => {
     const Review = document.getElementById("Textarea").value;
     const Rating = form.photo.value;
 
-    const fullForm = { id,Rating, Review };
+    const fullForm = { id, Rating, Review, count };
 
-   console.log(id)
+    console.log(id);
     const link = `http://localhost:5001/booksRating/${id}`;
-    axios.patch(link,fullForm)
-    .then((res) => {
+    axios.patch(link, fullForm).then((res) => {
       if (res.data.acknowledged) {
         form.reset();
-        Swal.fire("Thanks For!","Successfully You Give Rating !!","success");
+        Swal.fire("Thanks For!", "Successfully You Give Rating !!", "success");
       }
     });
 
