@@ -67,33 +67,33 @@ const AddBookingCard = ({ bookRoom, addedBookRoom, setBookRooms }) => {
   // return <div>True</div>
 
   return (
-    <div className="card md:w-[40rem] h-[50rem] bg-base-100 shadow-xl mx-auto">
-      <figure className="px-10 pt-10">
-        <img src={image1} alt="Shoes" className="rounded-xl" />
+    <div className="card  md:w-[40rem] h-[50rem] bg-base-100 border border-[#BA8A3E] rounded-none my-6  hover:shadow-xl mx-auto">
+      <figure className="">
+        <img src={image1} alt="Shoes" className="" />
       </figure>
       <div className="card-body items-center text-center">
-        <h2 className="card-title">{description}</h2>
+        <h2 className="card-title text-[#BA8A3E]">{description}</h2>
         <p>Room-Size: {roomSize}</p>
         <p>Availability: {roomAvailability}</p>
-        <p className="text-lg font-bold">
+        <p className="text-[#BA8A3E] font-thin">
           For Giving Please Hit on Give Rating Button
         </p>
-        <p>Price: ${price}</p>
+        <p className="text-2xl text-[#BA8A3E] my-8">Price: <span className="font-semibold text-[#BA8A3E]"> ${price} </span></p>
         <div className="card-actions">
           <button
             onClick={() => handelDelete()}
-            className="btn btn-outline btn-secondary"
+            className=" btn rounded-none bg-[#BA8A3E] border-0 hover:text-[#BA8A3E] text-white"
           >
             Cancel Booking
           </button>
 
           <Link to={`/rating/${_id}`}>
-            <button className="btn btn-outline btn-secondary">
+            <button className="btn rounded-none bg-[#BA8A3E] border-0 hover:text-[#BA8A3E] text-white">
               Give Rating
             </button>
           </Link>
           <Link to={`/update/${_id}`}>
-            <button className="btn btn-outline btn-secondary">
+            <button className="btn rounded-none bg-[#BA8A3E] border-0 hover:text-[#BA8A3E] text-white">
               Update Date
             </button>
           </Link>

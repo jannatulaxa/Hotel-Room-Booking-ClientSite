@@ -49,7 +49,7 @@ import Rating from '../Page/Rating/Rating';
             {
               path:'/rating/:id',
               element:<PrivateRoute><Rating></Rating></PrivateRoute>,
-              loader:({params})=>fetch(`http://localhost:5001/Bookings/${params.id}`)
+              loader:({params})=>fetch(`http://localhost:5001/books/${params.id}`)
             },
             {
               path:'/update/:id',
