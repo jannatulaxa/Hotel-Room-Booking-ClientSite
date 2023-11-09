@@ -18,13 +18,13 @@ const Rating = () => {
     const fullForm = { id, Rating, Review, count };
 
     console.log(id);
-    const link = `http://localhost:5001/booksRating/${id}`;
-    axios.patch(link, fullForm).then((res) => {
-      if (res.data.acknowledged) {
-        form.reset();
-        Swal.fire("Thanks For!", "Successfully You Give Rating !!", "success");
-      }
-    });
+    // const link = `http://localhost:5001/booksRating/${id}`;
+    // axios.patch(link, fullForm).then((res) => {
+    //   if (res.data.acknowledged) {
+    //     form.reset();
+    //     Swal.fire("Thanks For!", "Successfully You Give Rating !!", "success");
+    //   }
+    // });
 
     // Swal.fire("Yeahh!", "Successfully added product", "success");
   };
