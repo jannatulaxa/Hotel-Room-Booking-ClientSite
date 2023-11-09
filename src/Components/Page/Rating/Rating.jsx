@@ -1,27 +1,38 @@
-import { useParams } from "react-router-dom/dist/umd/react-router-dom.development";
+import { useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const Rating = () => {
-    const id = useParams()
+  const id = useParams();
 
+  const handelRating = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const Review = document.getElementById("Textarea").value;
+    const Rating = form.photo.value;
 
-    const handelRating = (e) => {
-        e.preventDefault();
-        const form = e.target;
-        const Review = document.getElementById("Textarea").value;
-        const Rating = form.photo.value;
-        const fullForm = { id,Rating, Review };
-        
-     
-          Swal.fire("Yeahh!", "Successfully added product", "success");
-       
-      };
+    const fullForm = { id,Rating, Review };
 
+   console.log(id)
+    const link = `http://localhost:5001/booksRating/${id}`;
+    axios.patch(link,fullForm)
+    .then((res) => {
+      if (res.data.acknowledged) {
+        form.reset();
+        Swal.fire("Thanks For!","Successfully You Give Rating !!","success");
+      }
+    });
+
+    // Swal.fire("Yeahh!", "Successfully added product", "success");
+  };
 
   return (
     <div>
-      <form onSubmit={handelRating} className="space-y-4 md:w-[40rem] mx-auto border-[1px] my-20">
+      <form
+        onSubmit={handelRating}
+        className="space-y-4 md:w-[40rem] mx-auto border-[1px] my-20"
+      >
         <label className="input-group md:w-4/5 lg:w-full mx-auto lg:input-group-md">
           <span className="w-[10rem] bg-[#FE834C] text-white font-bold">
             Rating
@@ -34,7 +45,7 @@ const Rating = () => {
           />
         </label>
         <label className="input-group md:w-4/5 lg:w-full mx-auto input-group-md">
-        <span className="w-[10rem] bg-[#FE834C] text-white font-bold">
+          <span className="w-[10rem] bg-[#FE834C] text-white font-bold">
             Review
           </span>
           <textarea

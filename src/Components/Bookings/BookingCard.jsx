@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 import "aos/dist/aos.css";
 const BookingCard = ({ room }) => {
   // console.log(Object.keys(room).join(","))
-  const { _id,image1,image2,image3,image4,price,description,roomName,roomSize,setInRoom,roomAvailability
+  const { _id,image1,image2,image3,image4,price,description,roomName,roomSize,setInRoom,roomAvailability,count
   } = room;
-
+console.log(room)
   const style = {
     width: "[100%]",
     height: "150px",
@@ -38,9 +38,9 @@ const BookingCard = ({ room }) => {
           <h2 className="card-title">{roomName}</h2>
           <h2 className="card-title">
             {" "}
-            Reviews: {room?.reviewCount ? room?.reviewCount : "0"}
+            Reviews: {count ? count : "0"}
           </h2>
-          <p>Price: {price}</p>
+          <p>Price: ${price}</p>
           <div className="card-actions text-[#BA8A3E]">
             <Link to={`/details/${_id}`}>
             <button className="btn rounded-none bg-[#BA8A3E] border-0 hover:text-[#BA8A3E] text-white">Explore Room</button>

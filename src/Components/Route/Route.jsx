@@ -50,7 +50,7 @@ import Rating from '../Page/Rating/Rating';
             {
               path:'/rating/:id',
               element:<PrivateRoute><Rating></Rating></PrivateRoute>,
-               loader:({params})=>fetch(`https://hotel-room-booking-server-site.vercel.app/books/${params.id}`) 
+              //  loader:({params})=>fetch(`http://localhost:5001/booksRating/${params.id}`) 
             },
             {
               path:'/update/:id',

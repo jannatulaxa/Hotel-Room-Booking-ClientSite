@@ -26,11 +26,13 @@ const DetailsPage = () => {
     roomName,
     roomSize,
     setInRoom,
+    count,
     roomAvailability,
   } = room;
 
   const handleAddToBook = () => {
     const cartItem = {
+      _id,
       image1,
       image2,
       image3,
@@ -40,6 +42,7 @@ const DetailsPage = () => {
       roomName,
       roomSize,
       setInRoom,
+      count,
       roomAvailability,
     };
 
@@ -92,6 +95,8 @@ const DetailsPage = () => {
             <h2 className="card-title md:text-2xl text-start text-[#BA8A3E]">{description}</h2>
             <p>Room-Size: {roomSize}</p>
             <p>Room-Availability: {roomAvailability}</p>
+            <p>Price: ${price}</p>
+            <p>Review: {count}</p>
             <div className="">
             <span className="font-bold" >Select Booking Date:</span>
             <DatePicker
@@ -117,7 +122,7 @@ const DetailsPage = () => {
                     {" "}
                     Booking Time: {startDate.toDateString()}
                   </h2>
-                  <p className="card-title">Price: {price}</p>
+                  <p className="card-title">Price: ${price}</p>
                   <div className="card-actions text-[#BA8A3E]">
                     <Link to={`/details/${_id}`}>
                       <button
@@ -158,37 +163,42 @@ const DetailsPage = () => {
         <ToastContainer />
       </div>
     );
-  } else {
+  } 
+  else {
     return (
       <div className="my-10">
         <h2 className="text-2xl text-center font-sans font-thin mt-6 mb-7">
-        Booking <span className="text-[#BA8A3E]">Dethbuhbguails</span>{" "}
+        Room <span className="text-[#BA8A3E]">Details</span>{" "}
       </h2>
 
-        <div className="grid  grid-cols-3 lg:grid-cols-3 lg:w-[80rem] mx-auto">
+        <div className=" flex flex-col lg:flex-row  w-[90%] mx-auto">
           <figure>
-            <img className="w-[20rem] mx-auto" src={image2} alt="Movie" />
+            <img className="lg:h-[20rem]" src={image2} alt="Movie" />
           </figure>
           <figure>
-            <img className="w-[20rem] mx-auto" src={image3} alt="Movie" />
+            <img className="lg:h-[20rem]" src={image3} alt="Movie" />
           </figure>
           <figure>
-            <img className="w-[20rem] mx-auto" src={image4} alt="Movie" />
+            <img className="lg:h-[20rem]" src={image4} alt="Movie" />
           </figure>
         </div>
 
-        <div className="card card-side bg-base-100 shadow-xl">
+        <div className="">
           <div className="card-body">
-            <h2 className="card-title text-center">{description}</h2>
+            <h2 className="card-title md:text-2xl text-start text-[#BA8A3E]">{description}</h2>
             <p>Room-Size: {roomSize}</p>
             <p>Room-Availability: Unavailable</p>
-            <span>Select Booking Date:</span>
+            <p>Price: ${price}</p>
+            <p>Review: {count}</p>
+            <div className="">
+            <span className="font-bold" >Select Booking Date:</span>
             <DatePicker
               id="date"
-              className="input input-bordered lg:w-[17rem] md:w-[27rem] w-[15rem] rounded-tl-none rounded-bl-none text-[#a8a6a6]"
+              className="input input-bordered md:ml-5 lg:w-[17rem] md:w-[27rem] w-[15rem] rounded-none text-[#BA8A3E] border-[#BA8A3E]"
               selected={startDate}
               onChange={(date) => setStartDate(date)}
             />
+            </div>
             {/*Start Work For Modal */}
 
             <dialog id="my_modal_3" className="modal">
@@ -200,53 +210,20 @@ const DetailsPage = () => {
                   </button>
                 </form>
                 <div className="card-body items-center text-center">
-                  <h2 className="card-title">Room: {roomName}</h2>
-                  <h2 className="card-title">
-                    {" "}
-                    Booking Time: {startDate.toDateString()}
-                  </h2>
-                  <p className="card-title">Price: {price}</p>
-                  <div className="card-actions text-[#BA8A3E]">
-                    <Link to={`/details/${_id}`}>
-                      <button
-                        onClick={handleAddToBook}
-                        className="btn rounded-none bg-[#BA8A3E] border-0 hover:text-[#BA8A3E] text-white"
-                      >
-                        Confirm Booking
-                      </button>
-                    </Link>
-                  </div>
+                  <h2 className="card-title">Room is Not Available</h2>
+                
+                 
                 </div>
               </div>
             </dialog>
             {/*End Work For Modal */}
-            {/*Start Work For 2nd Modal */}
-
-            {/* You can open the modal using document.getElementById('ID').showModal() method */}
-
-            <dialog id="my_modal_4" className="modal">
-              <div className="modal-box">
-                <form method="dialog">
-                  {/* if there is a button in form, it will close the modal */}
-                  <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
-                    ✕
-                  </button>
-                </form>
-                <h3 className="font-bold text-lg">Opps!!</h3>
-                <p className="py-4 font-serif font-bold text-2xl">
-                  Seats Are Not Available Now
-                </p>
-              </div>
-            </dialog>
-
-            {/*End Work For 2nd Modal */}
             <div className="card-actions flex">
               {user ? (
                 <button
+                  className="btn border-[#BA8A3E] rounded-none bg-[#BA8A3E] text-white "
                   onClick={() =>
-                    document.getElementById("my_modal_4").showModal()
+                    document.getElementById("my_modal_3").showModal()
                   }
-                  className="btn btn-outline btn-secondary"
                 >
                   Book Now
                 </button>

@@ -45,7 +45,7 @@ const AddBookingCard = ({ bookRooms }) => {
       }
     });
   };
-  console.log(Rooms?.length)
+
   if (Rooms?.length > 0) {
     return (
       <div className="grid grid-cols-1 lg:grid-cols-2  gap-3 my-20 w-[90%] mx-auto">
@@ -68,7 +68,8 @@ const AddBookingCard = ({ bookRooms }) => {
                 <p>Room-Size: {bookRoom?.roomSize}</p>
                 <p>Availability: {bookRoom?.availability}</p>
                 <p>SpecialOffers:{bookRoom?.specialOffers}</p>
-                <p>Price: {bookRoom?.price}</p>
+                <p>Review: {bookRoom?.count}</p>
+                <p>Price: ${bookRoom?.price}</p>
                 <div className="card-actions">
                   <button
                     onClick={() => handelDelete(bookRoom._id)}
